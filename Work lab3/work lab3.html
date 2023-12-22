@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.min.js"></script>
+  </head>
+  <body>
+    <a-scene arjs="debugUIEnabled: false;">
+      <a-marker preset="custom" type="pattern" url="шлях_до_вашого_файлу.patt">
+        <a-sphere src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_2048.jpg" radius="6.4"
+          rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 30000"
+        ></a-sphere>
 
+        <!-- Moon Container entity -->
+        <a-entity id="moonContainer" position="15 0 0" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 30000">
+          <!-- Moon -->
+          <a-sphere src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/moon_1024.jpg" id="moon" radius="1.74" color="#888888" segments-height="16" segments-width="32"
+            position="15 0 0" rotation="0 0 0"
+          ></a-sphere>
+        </a-entity>
+
+        <a-light type="directional" position="2 5 3" target="#earth" castShadow="true"></a-light>
+
+        <a-entity camera look-controls wasd-controls position="0 1.6 10"></a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
