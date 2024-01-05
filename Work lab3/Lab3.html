@@ -9,14 +9,14 @@
     <a-scene>
       <a-sphere src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_2048.jpg" radius="6.4"
         rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 30000"
-        <a-marker type="pattern" url="assets/pattern-The_Earth_seen_from_Apollo_17.patt">
+        <a-marker type="pattern" position="0 0 -20" url="assets/pattern-The_Earth_seen_from_Apollo_17.patt" >
         </a-marker>
       ></a-sphere>
 
-      <a-entity id="moonContainer" position="2 6 0" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 30000">
+      <a-entity id="moonContainer" position="2 6 -5" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 30000">
 
         <a-sphere src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/moon_1024.jpg" id="moon" radius="1.74" color="#888888"
-          position="15 0 0" rotation="0 0 0"
+          position="0 -5 -25" rotation="0 0 0"
         ></a-sphere>
       </a-entity>
 
